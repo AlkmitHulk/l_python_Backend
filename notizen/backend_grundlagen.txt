@@ -1,0 +1,20 @@
+Ein "Backend" ist die nicht sichtbare Instanz einer Applikation.
+
+Alles was im Hintergrund passiert, berut auf dem Backend.
+
+Wenn ich das noch richtig im Kopf habe hat das Backend folgende 3 Aufgaben:
+
+1. Anfragen engegen nehmen und beantworten
+2. Prüfen ob die Anfrage berechtig ist
+3. Das Storen der eigentlich Daten
+
+Anfragen engegenb nehmen und beantworten:
+
+Dabei habe ich bis jetzt nur die get Methode auf Client Seite gesehen:
+
+Es braucht einen Grundlegenden Socket, wlecher auf einem Port offen sein muss
+
+Auf dienen "Server Socket" beruft sich dann der Client Socket, ein "Sub Socket"
+Jeder Cleint erstellt einen eigenen
+
+Der Client Socket ist dann der Ansprechpartner für den Client, er bearbeitet dann die Anfrgen des Clients und  antortet dann auf diese.  
