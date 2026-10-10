@@ -27,13 +27,14 @@ print(client_msg.decode())
 ###Post
 client_post_01 = "HTTP/1.1 200 OK\r\n"
 client_post_02 = "Content-Type: text/plain\r\n"
-client_post_03 = "Content-Length: 12\r\n\r\n"
-client_post_04 = "Hello World!"
-full_client_post = str(client_post_01 + client_post_02 + client_post_03 + client_post_04)
+client_post_03 = "Content-Length: 13\r\n"
+client_post_04 = "Connection: close \r\n\r\n"
+client_post_05 = "Hello World!\n"
+full_client_post = client_post_01 + client_post_02 + client_post_03 + client_post_04 + client_post_05
 bytes_client_post = full_client_post.encode()
 client_socket_info.sendall(bytes_client_post)
 
 
-
-##debug
-print(server)
+##Closing all the Sockets
+client_socket_info.close()
+server.close()
